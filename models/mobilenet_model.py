@@ -19,6 +19,6 @@ class MobileNetClassifier:
         for pred in preds:
             decode = decode_prediction(np.expand_dims(pred,0), top = 5)[0]
             results.append([(name, float(prob)) for _, name, prob in decode])
-        return
+        return results
 
 
